@@ -1,7 +1,5 @@
 package web.model;
 
-
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 @Entity

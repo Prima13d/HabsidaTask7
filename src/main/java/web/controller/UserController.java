@@ -4,8 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import web.service.UserService;
 import web.service.UserServiceImpl;
 
 @Controller
@@ -19,7 +17,7 @@ public class UserController {
 
     @GetMapping("/users")
     public String showUsers(Model model) {
-        model.addAttribute("cars", userService.getAllUsers());
+        model.addAttribute("users", userService.getAllUsers());
 
         return "users";
     }
