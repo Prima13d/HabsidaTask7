@@ -7,9 +7,6 @@ import java.util.List;
 
 @Service
 public interface UserService {
-    void createUsersTable();
-
-    void dropUsersTable();
 
     void saveUser(String userFirstName, String userFamilyName);
 
