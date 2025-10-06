@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+</head>
+<body>
+    <h2>Add New User</h2>
+
+    <form th:action="@{/users/add}" method="post">
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" name="userFirstName" required><br><br>
+
+       <label for="familyName">Family name:</label>
+      <input type="text" id="familyName" name="userFamilyName" required><br><br>
+
+       <button type="submit">Save</button>
+    </form>
+
+    <a th:href="@{/users}">
+     <button>Back to Users List</button>
+    </a>
+</body>
+</html>

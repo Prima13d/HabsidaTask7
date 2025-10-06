@@ -5,22 +5,27 @@
     <title>Users List</title>
 </head>
 <body>
-<h2>/Users</h2>
-<table border = "1">
+<h2>Users</h2>
+
+<table border="1">
     <thead>
     <tr>
         <th>Id</th>
-        <th>First name</th>
-        <th>Family name</th>
+        <th>First Name</th>
+        <th>Family Name</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="user : ${users}">
-        <td th:text="${user.id}">Id</td>
-        <td th:text="${user.userFirstName}">First name</td>
-        <td th:text="${user.userFamilyName}">Family name</td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.userFirstName}"></td>
+        <td th:text="${user.userFamilyName}"></td>
     </tr>
     </tbody>
 </table>
+
+<a th:href="@{/users/add}">
+    <button>Add User</button>
+</a>
 </body>
 </html>

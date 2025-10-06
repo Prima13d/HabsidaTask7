@@ -1,6 +1,7 @@
 package web.dao;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
 
 import javax.persistence.EntityManager;
@@ -13,6 +14,7 @@ public class UserDaoHibernateImpl implements UserDao {
     private EntityManager entityManager;
 
     @Override
+    @Transactional
     public void saveUser(String userFirstName, String userFamilyName) {
         entityManager.persist(new User(userFirstName, userFamilyName));
     }
